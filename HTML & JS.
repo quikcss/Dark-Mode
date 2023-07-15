@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h4>quikcss. - Dark Mode</h4>
+    <div class="btn">
+        <div class="icon">
+            <i id="icon" class="fa-regular fa-moon"></i>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/3701cb64b7.js" crossorigin="anonymous"></script>
+    <script>
+       let btn = document.querySelector(".btn")
+       let body = document.body
+       let icon = document.getElementById("icon")
+       icon.addEventListener("click", ()=>{
+        btn.classList.toggle("color")
+        body.classList.toggle(".active")
+        if(document.body.classList.contains(".active")){
+            icon.classList.replace("fa-moon", "fa-sun")
+        }
+        else{
+            icon.classList.toggle("fa-moon")
+        }
+       }) 
+    </script>
+</body>
+</html>
